@@ -1,0 +1,39 @@
+<div class="container">
+
+  <div class="titulo">
+    <h1> Lista vehiculos </h1>
+  </div>
+
+  <div class="menu-acciones">
+    <app-menu-acciones></app-menu-acciones>
+  </div>
+
+  <div class="container-table">
+    <table class="table">
+      <tr>
+        <th>ID</th>
+        <th>Kilometraje</th>
+        <th>Matricula</th>
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th>Color</th>
+        <th>Precio</th>
+      </tr>
+      <tr *ngFor="let vehiculo of listVehiculos">
+        <td>{{ vehiculo.idVehiculos }}</td>
+        <td>{{ vehiculo.kilometraje }}</td>
+        <td>{{ vehiculo.matricula}}</td>
+        <td>{{ vehiculo.marca }}</td>
+        <td>{{ vehiculo.modelo }}</td>
+        <td>{{ vehiculo.color }}</td>
+        <td>{{ vehiculo.precio }}</td>
+      </tr>
+
+
+    </table>
+
+    <div *ngIf="show" class="registro-span">
+      <span>No hay registros</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="titulo">
+    <h1> Lista concesionarios </h1>
+  </div>
+
+  <div class="menu-acciones">
+    <app-menu-acciones></app-menu-acciones>
+  </div>
+
+  <div class="container-table">
+    <table class="table">
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Telefono</th>
+        <th>Direccion</th>
+      </tr>
+
+      <tr *ngFor="let concesionarios of listConcesionarios">
+        <td>{{concesionarios.idConcesionario}} </td>
+        <td>{{concesionarios.nombre}} </td>
+        <td>{{concesionarios.correo}} </td>
+        <td>{{concesionarios.telefono}} </td>
+        <td>{{concesionarios.direccion}} </td>
+      </tr>
+
+    </table>
+
+    <div *ngIf="show" class="registro-span">
+      <span>No hay registros</span>
+    </div>
+
+  </div>
+
+</div>

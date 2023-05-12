@@ -1,0 +1,33 @@
+<div class="container">
+
+  <div class="titulo">
+    <h1> Lista ventas </h1>
+  </div>
+
+  <div class="menu-acciones">
+    <app-menu-acciones></app-menu-acciones>
+  </div>
+
+  <div class="container-table">
+    <table class="table">
+      <tr>
+        <th>ID</th>
+        <th>Fecha Venta</th>
+        <th>Precio Final</th>
+        <th>Observaciones</th>
+      </tr>
+
+      <tr *ngFor="let ventas of listVentas">
+        <td>{{ ventas.idVenta }}</td>
+        <td>{{ ventas.fechaVenta }}</td>
+        <td>{{ ventas.precioFinal }}</td>
+        <td>{{ ventas.observaciones }}</td>
+      </tr>
+
+    </table>
+
+    <div *ngIf="show" class="registro-span">
+      <span>No hay registros</span>
+    </div>
+  </div>
+</div>

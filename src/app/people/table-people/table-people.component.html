@@ -1,0 +1,40 @@
+<div class="container">
+  
+  <div class="titulo">
+    <h1> Lista usuarios </h1>
+  </div>
+
+  <div class="menu-acciones">
+    <app-menu-acciones></app-menu-acciones>
+  </div>
+
+  <div class="container-table">
+    <table class="table">
+
+      <tr>
+        <th > ID </th>
+        <th > Nombre </th>
+        <th > Correo </th>
+        <th > Identificacion </th>
+        <th > Telefono </th>
+        <th > Direccion </th>
+      </tr>
+  
+      <tr *ngFor="let user of listUsers">
+        <td>{{ user.idUsuario }}</td>
+        <td>{{ user.nombre + " " + user.apellido}}</td>
+        <td>{{ user.correo }}</td>
+        <td>{{ user.identificacion }}</td>
+        <td>{{ user.telefono }}</td>
+        <td>{{ user.direccion }}</td>
+      </tr>
+  
+    </table>
+
+    <div *ngIf="show" class="registro-span">
+      <span>No hay registros</span>
+    </div>
+  
+  </div>
+
+</div>
