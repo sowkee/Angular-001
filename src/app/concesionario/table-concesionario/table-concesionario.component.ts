@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConcesionarioData } from 'src/app/model/concesionario-data';
 import { ConcesionarioService } from 'src/app/service/concesionario.service';
 
 @Component({
@@ -8,18 +9,24 @@ import { ConcesionarioService } from 'src/app/service/concesionario.service';
 })
 export class TableConcesionarioComponent implements OnInit{
 
-  listConcesionarios: any[] = [];
+  listConcesionarios: ConcesionarioData[] = [];
   show: boolean = true
 
   constructor(private concesionarioService: ConcesionarioService) {}
 
   ngOnInit() {
+    this.getConcesionarios();
+    
+  }
+
+  getConcesionarios() {
     this.concesionarioService.getAllConcesionario().subscribe(res => {
       this.listConcesionarios = res.data;
       (this.listConcesionarios.length>0)?this.show = false:this.show = true
       console.log(this.listConcesionarios);
+    }, (error) => {
+      console.log(error)
     });
-    
   }
 
 }

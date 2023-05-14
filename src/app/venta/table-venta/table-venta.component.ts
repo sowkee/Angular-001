@@ -14,12 +14,18 @@ export class TableVentaComponent implements OnInit {
   constructor(private ventasService: VentaService) { }
 
   ngOnInit() {
+    this.getVentas();
+  }
+
+  getVentas() {
     this.ventasService.getAllVehiculos().subscribe(res => {
       this.listVentas = res.data;
       (this.listVentas.length>0)?this.show = false:this.show = true
 
       console.log(this.listVentas);
-    })
+    }, (error) => {
+      console.log(error);
+    });
   }
 
 }

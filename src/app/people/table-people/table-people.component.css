@@ -7,7 +7,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .container {
@@ -26,18 +26,17 @@
     align-items: center; 
     width: 90%;
 }
-.h1 {
-    font-family: 'Open Sans', sans-serif;
+
+h1 {
+    font-family: 'DM Sans', sans-serif;
     font-weight: 400;
-    font-size: 1.8em;
+    font-size: 1.8rem;
 }
 
 .menu-acciones {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 90%;
-    height: 10%;
     margin-bottom: 1.5em;
 }
 
@@ -50,13 +49,19 @@
 .table {
     width: 100%;
     border-collapse: collapse;
-    border: .3em solid black;
+    border: .3em solid rgb(133, 29, 29);
     font-weight: 400;
+    text-align: center;
 }
+
+th {
+    text-transform: uppercase;
+    font-family: 'DM Sans', sans-serif;
+}
+
 
 th, td {
     border: .3em solid black;
-    text-transform: uppercase;
     font-weight: 500;
     height: 3.5em;
 }

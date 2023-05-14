@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="titulo">
+        <h1>Agregar usuario</h1>
+    </div>
+
+
+    <form class="form-container" [formGroup]="agregarForm" (ngSubmit)="agegarUsuario()">
+
+        <label class="txtfomr" for="txtNombre">Nombre</label>
+        <input class="txtfomr" type="text" id="txtNombre" name="txtNombre" formControlName="nombre">
+
+        <label class="txtfomr" for="txtApellido">Apellido</label>
+        <input class="txtfomr" type="text" id="txtApellido" name="txtApellido" formControlName="apellido">
+
+        <label class="txtfomr" for="txtCorreo">Correo</label>
+        <input class="txtfomr" type="text" id="txtCorreo" name="txtCorreo" formControlName="correo">
+
+        <label class="txtfomr" for="txtIdentificacion">Identificacion</label>
+        <input class="txtfomr" type="number" id="txtIdentificacion" name="txtIdentificacion" formControlName="identificacion">
+
+        <label class="txtfomr" for="txtTelefono">Telefono</label>
+        <input class="txtfomr" type="number" id="txtTelefono" name="txtTelefono" formControlName="telefono">
+
+        <label class="txtfomr" for="txtDireccion">Direccion</label>
+        <input class="txtfomr" type="text" id="txtDireccion" name="txtDireccion" formControlName="direccion">
+
+        <input type="submit" value="Guardar">
+
+    </form>
+
+
+</div>

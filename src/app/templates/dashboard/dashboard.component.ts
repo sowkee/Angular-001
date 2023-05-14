@@ -8,5 +8,6 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
-  constructor(private router: Router, private route: ActivatedRoute) {}
+
+  constructor() {}
 }

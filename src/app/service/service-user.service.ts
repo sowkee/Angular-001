@@ -15,7 +15,12 @@ export class ServiceUserService {
 
   constructor(private http:HttpClient) { }
 
-  getAllUsers(){
-    return this.http.get<any>(urlBase+"/all");
+  getAllUsers(): Observable<ResponseI>{
+    return this.http.get<ResponseI>(urlBase + "/all");
   }
+
+  crearUsuario(data:any): Observable<ResponseI> {
+    return this.http.post<ResponseI>(urlBase + "/create", data);
+  }
+  
 }
