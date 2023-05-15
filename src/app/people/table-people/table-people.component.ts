@@ -35,6 +35,10 @@ export class TablePeopleComponent implements OnInit{
     
   }
 
+  eliminarUsuario() {
+    
+  }
+
   
 
 

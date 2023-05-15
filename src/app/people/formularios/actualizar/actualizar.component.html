@@ -4,33 +4,40 @@
     </div>
 
 
-    <form class="form-container" action="PUT">
 
-        
+
+
+
+
+    <form class="form-container" [formGroup]="actualizarForm" (ngSubmit)="actualizarUsuario()">
+
         <label class="txtfomr" for="txtId">ID</label>
-        <input class="txtfomr" type="number" id="txtId">
+        <input class="txtfomr" type="number" id="txtId" name="txtId" formControlName="idUsuario">
 
         <label class="txtfomr" for="txtNombre">Nombre</label>
-        <input class="txtfomr" type="text" id="txtNombre">
+        <input class="txtfomr" type="text" id="txtNombre" name="txtNombre" formControlName="nombre">
 
         <label class="txtfomr" for="txtApellido">Apellido</label>
-        <input class="txtfomr" type="text" id="txtApellido">
+        <input class="txtfomr" type="text" id="txtApellido" name="txtApellido" formControlName="apellido">
 
         <label class="txtfomr" for="txtCorreo">Correo</label>
-        <input class="txtfomr" type="text" id="txtCorreo">
+        <input class="txtfomr" type="text" id="txtCorreo" name="txtCorreo" formControlName="correo">
 
         <label class="txtfomr" for="txtIdentificacion">Identificacion</label>
-        <input class="txtfomr" type="number" id="txtIdentificacion">
+        <input class="txtfomr" type="number" id="txtIdentificacion" name="txtIdentificacion"
+            formControlName="identificacion">
 
         <label class="txtfomr" for="txtTelefono">Telefono</label>
-        <input class="txtfomr" type="number" id="txtTelefono">
+        <input class="txtfomr" type="number" id="txtTelefono" name="txtTelefono" formControlName="telefono">
 
         <label class="txtfomr" for="txtDireccion">Direccion</label>
-        <input class="txtfomr" type="text" id="txtDireccion">
+        <input class="txtfomr" type="text" id="txtDireccion" name="txtDireccion" formControlName="direccion">
 
-        <button class="btnEnviar" type="submit">Actualizar</button>
+        <input type="submit" value="Guardar">
 
     </form>
+
+
 
 
 </div>
