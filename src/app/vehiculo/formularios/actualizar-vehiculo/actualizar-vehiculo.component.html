@@ -4,28 +4,29 @@
         <h1>Actualizar vehiculo</h1>
     </div>
     
-    <form class="form-container" action="PUT">
+    <form class="form-container" [formGroup]="actualizarForm" (ngSubmit)="actualizarVehiculo()">
         
         <label class="txtfomr" for="txtId">ID</label>
-        <input class="txtfomr" type="number" id="txtId">
+        <input class="txtfomr" type="number" id="txtId" name="txtId" formControlName="idVehiculos">
 
         <label class="txtfomr" for="txtKilometraje  ">Kilometraje</label>
-        <input class="txtfomr" type="number" id="txtKilometraje">
+        <input class="txtfomr" type="number" id="txtKilometraje" name="txtKilometraje" formControlName="kilometraje">
 
         <label class="txtfomr" for="txtMatricula">Matricula</label>
-        <input class="txtfomr" type="text" id="txtMatricula">
+        <input class="txtfomr" type="text" id="txtMatricula" name="txtMatricula" formControlName="matricula">
 
         <label class="txtfomr" for="txtMarca">Marca</label>
-        <input class="txtfomr" type="text" id="txtMarca">
+        <input class="txtfomr" type="text" id="txtMarca" name="txtMarca" formControlName="marca">
 
         <label class="txtfomr" for="txtModelo">Modelo</label>
-        <input class="txtfomr" type="text" id="txtModelo">
+        <input class="txtfomr" type="text" id="txtModelo" name="txtModelo" formControlName="modelo">
 
         <label class="txtfomr" for="txtColor">Color</label>
-        <input class="txtfomr" type="text" id="txtColor">
+        <input class="txtfomr" type="text" id="txtColor" name="txtColor" formControlName="color">
 
         <label class="txtfomr" for="txtPrecio">Precio</label>
-        <input class="txtfomr" type="number" id="txtPrecio">
+        <input class="txtfomr" type="number" id="txtPrecio" name="txtPrecio" formControlName="precio">
+
 
         <button class="btnEnviar" type="submit">Enviar</button>
 

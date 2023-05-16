@@ -13,6 +13,18 @@ export class ConcesionarioService {
   constructor(private http: HttpClient) { }
 
   getAllConcesionario(): Observable<ResponseI> {
-    return this.http.get<ResponseI>(urlBase + "/all")
+    return this.http.get<ResponseI>(urlBase + "/all");
+  }
+
+  crearConcesionario(data:any): Observable<ResponseI> {
+    return this.http.post<ResponseI>(urlBase + "/create", data);
+  }
+
+  actualizarConcesionario(data:any): Observable<ResponseI> {
+    return this.http.put<ResponseI>(urlBase + "/update", data);
+  }
+
+  eliminarConcesionario(data:number): Observable<ResponseI> {
+    return this.http.delete<ResponseI>(urlBase + "/delete/" + data);
   }
 }

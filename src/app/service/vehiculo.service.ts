@@ -16,4 +16,16 @@ export class VehiculoService {
   getAllVehiculos(): Observable<ResponseI> {
     return this.http.get<ResponseI>(urlBase + "/all");
   }
+
+  crearVehiculo(data:any): Observable<ResponseI> {
+    return this.http.post<ResponseI>(urlBase + "/create", data);
+  }
+
+  actualizarVehiculo(data:any): Observable<ResponseI> {
+    return this.http.put<ResponseI>(urlBase + "/update", data);
+  }
+
+  eliminarVehiculo(data:number): Observable<ResponseI> {
+    return this.http.delete<ResponseI>(urlBase + "/delete/" + data);
+  }
 }

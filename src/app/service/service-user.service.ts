@@ -24,11 +24,11 @@ export class ServiceUserService {
   }
 
   actualizarUsuario(data:any): Observable<ResponseI> {
-    return this.http.put<ResponseI>(urlBase + "/update", data)
+    return this.http.put<ResponseI>(urlBase + "/update", data);
   }
 
-  eliminarUsuario(data:any): Observable<ResponseI> {
-    return this.http.delete<ResponseI>(urlBase + "/delete/{id}")
+  eliminarUsuario(data:number): Observable<ResponseI> {
+    return this.http.delete<ResponseI>(urlBase + "/delete/" + data);
   }
   
 }

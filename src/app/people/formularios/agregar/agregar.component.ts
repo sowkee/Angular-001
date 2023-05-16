@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ServiceUserService } from 'src/app/service/service-user.service';
 
 @Component({
@@ -20,7 +21,7 @@ export class AgregarComponent {
 
   })
 
-  constructor(private usuarioSercivio: ServiceUserService) { }
+  constructor(private usuarioSercivio: ServiceUserService, private router: Router) { }
 
   agegarUsuario(): void {
 
@@ -35,8 +36,13 @@ export class AgregarComponent {
     }
 
     this.usuarioSercivio.crearUsuario(usuario).subscribe(res => {
+      console.log(res);
       if (res.status === 'CREATED') {
         alert("Registro Exitoso");
+        this.router.navigateByUrl('dashboard/usuarios', { skipLocationChange: true }).then(() => {
+          this.router.navigate(['dashboard/usuarios']);
+        });
+        
       }else {
         alert('Hubo un error');
       }

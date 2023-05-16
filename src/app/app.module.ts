@@ -32,6 +32,8 @@ import { AgregarVentaComponent } from './venta/formularios/agregar-venta/agregar
 import { MenuVentaComponent } from './venta/menu-venta/menu-venta.component';
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { AgregarVehiculoComponent } from './vehiculo/formularios/agregar-vehiculo/agregar-vehiculo.component';
+import { ActualizarVehiculoComponent } from './vehiculo/formularios/actualizar-vehiculo/actualizar-vehiculo.component';
 
 
 @NgModule({
@@ -55,6 +57,9 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     ActualizarVentaComponent,
     AgregarVentaComponent,
     MenuVentaComponent,
+    AgregarVehiculoComponent,
+    ActualizarVehiculoComponent,
+    MenuVehiculoComponent
   ],
   imports: [
     BrowserModule,
