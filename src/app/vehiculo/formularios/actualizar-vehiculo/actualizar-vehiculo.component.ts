@@ -14,13 +14,13 @@ export class ActualizarVehiculoComponent implements OnInit{
 
   ngOnInit(): void {
     this.actualizarForm = this.fb.group({
-      idUsuario: ['', Validators.required],
-      nombre: ['', Validators.required],
-      apellido: ['', Validators.required],
-      correo: ['', Validators.required],
-      identificacion: ['', Validators.required],
-      telefono: ['', Validators.required],
-      direccion: ['', Validators.required],
+      idVehiculos: ['', Validators.required],
+      kilometraje: ['', Validators.required],
+      matricula: ['', Validators.required],
+      marca: ['', Validators.required],
+      modelo: ['', Validators.required],
+      color: ['', Validators.required],
+      precio: ['', Validators.required],
     })
   }
 

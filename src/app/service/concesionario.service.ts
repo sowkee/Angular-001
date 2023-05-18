@@ -22,6 +22,7 @@ export class ConcesionarioService {
 
   actualizarConcesionario(data:any): Observable<ResponseI> {
     return this.http.put<ResponseI>(urlBase + "/update", data);
+  
   }
 
   eliminarConcesionario(data:number): Observable<ResponseI> {

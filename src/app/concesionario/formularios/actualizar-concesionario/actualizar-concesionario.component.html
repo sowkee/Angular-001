@@ -7,7 +7,7 @@
     <form class="form-container" [formGroup]="actualizarForm" (ngSubmit)="actualizarConcesionario()">
         
         <label class="txtfomr" for="txtId">ID</label>
-        <input class="txtfomr" type="number" id="txtId" name="txtId" formControlName="idConsecioanrio">
+        <input class="txtfomr" type="number" id="txtId" name="txtId" formControlName="idConcesionario">
 
         <label class="txtfomr" for="txtNombre">Nombre</label>
         <input class="txtfomr" type="text" id="txtNombre" name="txtNombre" formControlName="nombre">
@@ -20,6 +20,8 @@
 
         <label class="txtfomr" for="txtDireccion">Direccion</label>
         <input class="txtfomr" type="text" id="txtDireccion" name="txtDireccion" formControlName="direccion">
+
+        <button class="btnEnviar">Enviar</button>
 
 
     </form>

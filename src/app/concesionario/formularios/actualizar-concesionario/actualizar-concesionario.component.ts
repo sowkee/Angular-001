@@ -28,7 +28,7 @@ export class ActualizarConcesionarioComponent implements OnInit {
   actualizarConcesionario() {
     const data = this.actualizarForm.value;
     this.concesionarioSercivio.actualizarConcesionario(data).subscribe(res => {
-      if (res.status === 'CREATED') {
+      if (res.status === 'ACCEPTED') {
         console.log(res)
         alert("Actualizacion Exitosa");
       }else {

@@ -15,6 +15,7 @@
         <th>Correo</th>
         <th>Telefono</th>
         <th>Direccion</th>
+        <th><button class="eliminar"><i class="fa-solid fa-trash"></i></button></th>
       </tr>
 
       <tr *ngFor="let concesionarios of listConcesionarios">
@@ -23,9 +24,12 @@
         <td>{{concesionarios.correo}} </td>
         <td>{{concesionarios.telefono}} </td>
         <td>{{concesionarios.direccion}} </td>
+        <td><button class="eliminar"><i class="fa-solid fa-trash"></i></button></td>
       </tr>
 
     </table>
+
+
 
     <div *ngIf="show" class="registro-span">
       <span>No hay registros</span>

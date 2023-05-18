@@ -4,16 +4,16 @@
         <h1>Agregar ventas</h1>
     </div>
     
-    <form class="form-container" action="POST">
+    <form class="form-container" [formGroup]="agregarForm" (ngSubmit)="agregarVenta()">
 
         <label class="txtfomr" for="txtFechaVenta">Feche Venta</label>
-        <input class="txtfomr" type="date" id="txtFechaVenta">
+        <input class="txtfomr" type="date" id="txtFechaVenta" name="txtFechaVenta" formControlName="fechaVenta">
 
         <label class="txtfomr" for="txtPrecioFinal">Precio Final</label>
-        <input class="txtfomr" type="number" id="txtPrecioFinal">
+        <input class="txtfomr" type="number" id="txtPrecioFinal" name="txtPrecioFinal" formControlName="precioFinal">
 
         <label class="txtfomr" for="txtObservaciones">Observaciones</label>
-        <input class="txtfomr" type="text" id="txtObservaciones">
+        <input class="txtfomr" type="text" id="txtObservaciones" name="txtObservaciones" formControlName="observaciones">
 
         <button class="btnEnviar" type="submit">Enviar</button>
 

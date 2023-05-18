@@ -18,12 +18,12 @@ export class AgregarComponent {
     identificacion: new FormControl(''),
     telefono: new FormControl(''),
     direccion: new FormControl(''),
-
-  })
+    
+  });
 
   constructor(private usuarioSercivio: ServiceUserService, private router: Router) { }
 
-  agegarUsuario(): void {
+  agregarUsuario(): void {
 
     let usuario = {
       idUsuario: this.agregarForm.get('idUsuario')?.value,
@@ -36,14 +36,14 @@ export class AgregarComponent {
     }
 
     this.usuarioSercivio.crearUsuario(usuario).subscribe(res => {
-      console.log(res);
+      console.log(res.data);
       if (res.status === 'CREATED') {
         alert("Registro Exitoso");
         this.router.navigateByUrl('dashboard/usuarios', { skipLocationChange: true }).then(() => {
           this.router.navigate(['dashboard/usuarios']);
         });
         
-      }else {
+      } else {
         alert('Hubo un error');
       }
     });

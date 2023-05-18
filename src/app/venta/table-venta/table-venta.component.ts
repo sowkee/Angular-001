@@ -18,7 +18,7 @@ export class TableVentaComponent implements OnInit {
   }
 
   getVentas() {
-    this.ventasService.getAllVehiculos().subscribe(res => {
+    this.ventasService.getAllVentas().subscribe(res => {
       this.listVentas = res.data;
       (this.listVentas.length>0)?this.show = false:this.show = true
 

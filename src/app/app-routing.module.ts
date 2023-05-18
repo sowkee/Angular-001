@@ -5,10 +5,19 @@ import { TableConcesionarioComponent } from './concesionario/table-concesionario
 import { TableVehiculoComponent } from './vehiculo/table-vehiculo/table-vehiculo.component';
 import { TableVentaComponent } from './venta/table-venta/table-venta.component';
 import { TablePeopleComponent } from './people/table-people/table-people.component';
+import { InicioComponent } from './templates/inicio/inicio.component';
+import { NosotrosComponent } from './templates/nosotros/nosotros.component';
+import { OopsComponent } from './templates/oops/oops.component';
  
 
 const appRoutes: Routes = [
 
+  { path: '', redirectTo: '/inicio', pathMatch: 'full' },
+  {path: "inicio", component: InicioComponent},
+  {path: "nosotros", component: NosotrosComponent},
+  {path: "sedes", component: OopsComponent},
+  {path: "vehiculos", component: OopsComponent},
+  
   {
     path: "dashboard",
     component: DashboardComponent,

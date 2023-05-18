@@ -5,19 +5,19 @@
         <h1>Actualizar ventas</h1>
     </div>
     
-    <form class="form-container" action="PUT">
+    <form class="form-container" [formGroup]="actualizarForm" (ngSubmit)="actualizarVenta()">
         
         <label class="txtfomr" for="txtId">ID</label>
-        <input class="txtfomr" type="number" id="txtId">
+        <input class="txtfomr" type="number" id="txtId" name="txtId" formControlName="idVenta">
 
         <label class="txtfomr" for="txtFechaVenta">Feche Venta</label>
-        <input class="txtfomr" type="date" id="txtFechaVenta">
+        <input class="txtfomr" type="date" id="txtFechaVenta" name="txtFechaVenta" formControlName="fechaVenta">
 
         <label class="txtfomr" for="txtPrecioFinal">Precio Final</label>
-        <input class="txtfomr" type="number" id="txtPrecioFinal">
+        <input class="txtfomr" type="number" id="txtPrecioFinal" name="txtPrecioFinal" formControlName="precioFinal">
 
         <label class="txtfomr" for="txtObservaciones">Observaciones</label>
-        <input class="txtfomr" type="text" id="txtObservaciones">
+        <input class="txtfomr" type="text" id="txtObservaciones" name="txtObservaciones" formControlName="observaciones">
 
         <button class="btnEnviar" type="submit">Enviar</button>
 

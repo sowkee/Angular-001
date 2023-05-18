@@ -18,7 +18,7 @@
         <th> Identificacion </th>
         <th> Telefono </th>
         <th> Direccion </th>
-        <th> </th>
+        <th><button class="eliminar"><i class="fa-solid fa-trash"></i></button></th>
       </tr>
   
       <tr *ngFor="let user of listUsers">
@@ -28,10 +28,13 @@
         <td>{{ user.identificacion }}</td>
         <td>{{ user.telefono }}</td>
         <td>{{ user.direccion }}</td>
-        <td><button><i class="fa-solid fa-trash"></i></button></td>
+        <td><button class="eliminar"><i class="fa-solid fa-trash "></i></button></td>
       </tr>
   
     </table>
+
+    
+
 
     <div *ngIf="show" class="registro-span">
       <span>No hay registros</span>

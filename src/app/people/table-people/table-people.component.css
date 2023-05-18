@@ -66,6 +66,18 @@ th, td {
     height: 3.5em;
 }
 
+td .eliminar:hover {
+    cursor: pointer;
+}
+
+.eliminar {
+    width: auto;
+    height: 100%;
+    border: none;
+    font-size: 2em;
+
+}
+
 .registro-span {
     margin-top: 1em;
     text-align: center;

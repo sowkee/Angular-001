@@ -34,6 +34,12 @@ import { MenuVentaComponent } from './venta/menu-venta/menu-venta.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AgregarVehiculoComponent } from './vehiculo/formularios/agregar-vehiculo/agregar-vehiculo.component';
 import { ActualizarVehiculoComponent } from './vehiculo/formularios/actualizar-vehiculo/actualizar-vehiculo.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
+import { InicioComponent } from './templates/inicio/inicio.component';
+import { NosotrosComponent } from './templates/nosotros/nosotros.component';
+import { OopsComponent } from './templates/oops/oops.component';
+
 
 
 @NgModule({
@@ -59,7 +65,10 @@ import { ActualizarVehiculoComponent } from './vehiculo/formularios/actualizar-v
     MenuVentaComponent,
     AgregarVehiculoComponent,
     ActualizarVehiculoComponent,
-    MenuVehiculoComponent
+    MenuVehiculoComponent,
+    InicioComponent,
+    NosotrosComponent,
+    OopsComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +78,9 @@ import { ActualizarVehiculoComponent } from './vehiculo/formularios/actualizar-v
     MatDialogModule,
     MatIconModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatPaginatorModule,
+    MatTableModule
   ],
   providers: [
     ServiceUserService,

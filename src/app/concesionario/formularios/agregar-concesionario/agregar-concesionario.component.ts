@@ -8,14 +8,6 @@ import { ConcesionarioService } from 'src/app/service/concesionario.service';
   styleUrls: ['./agregar-concesionario.component.css']
 })
 export class AgregarConcesionarioComponent {
-  /*
-  
-  idConcesionario: number,
-      nombre: string,
-      correo: string,
-      telefono: string,
-      direccion: string
-  */
 
   agregarForm = new FormGroup({
     idConcesionario: new FormControl(''),
@@ -32,7 +24,7 @@ export class AgregarConcesionarioComponent {
   agegarConcesionario(): void {
 
     let concesionario = {
-      idConcesionario: this.agregarForm.get('idUsuario')?.value,
+      idConcesionario: this.agregarForm.get('idConcesionario')?.value,
       nombre: this.agregarForm.get('nombre')?.value,
       correo: this.agregarForm.get('correo')?.value,
       telefono: this.agregarForm.get('telefono')?.value,
@@ -40,8 +32,8 @@ export class AgregarConcesionarioComponent {
     }
 
     this.concesionarioSercivio.crearConcesionario(concesionario).subscribe(res => {
-      console.log(res);
-      if (res.status === 'CREATED') {
+      console.log(res.data);
+      if (res.status === 'ACCEPTED') {
         alert("Registro Exitoso");
 
       } else {

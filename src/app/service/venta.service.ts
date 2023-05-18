@@ -14,19 +14,19 @@ export class VentaService {
 
   constructor(private http:HttpClient) { }
 
-  getAllVehiculos(): Observable<ResponseI> {
+  getAllVentas(): Observable<ResponseI> {
     return this.http.get<ResponseI>(urlBase + "/all")
   }
 
-  crearUsuario(data:any): Observable<ResponseI> {
+  crearVenta(data:any): Observable<ResponseI> {
     return this.http.post<ResponseI>(urlBase + "/create", data);
   }
 
-  actualizarUsuario(data:any): Observable<ResponseI> {
+  actualizarVenta(data:any): Observable<ResponseI> {
     return this.http.put<ResponseI>(urlBase + "/update", data);
   }
 
-  eliminarUsuario(data:number): Observable<ResponseI> {
+  eliminarVenta(data:number): Observable<ResponseI> {
     return this.http.delete<ResponseI>(urlBase + "/delete/" + data);
   }
 }
