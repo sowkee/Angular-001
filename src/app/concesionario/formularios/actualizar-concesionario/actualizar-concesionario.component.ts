@@ -22,7 +22,7 @@ export class ActualizarConcesionarioComponent implements OnInit {
       correo: ['', Validators.required],
       telefono: ['', Validators.required],
       direccion: ['', Validators.required]
-    })
+    });
   }
 
   actualizarConcesionario() {
@@ -31,6 +31,7 @@ export class ActualizarConcesionarioComponent implements OnInit {
       if (res.status === 'ACCEPTED') {
         console.log(res)
         alert("Actualizacion Exitosa");
+        alert("Recargar la pagina.");
       }else {
         alert('Hubo un error');
       }

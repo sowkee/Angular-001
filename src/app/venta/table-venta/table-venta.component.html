@@ -23,7 +23,7 @@
         <td>{{ ventas.fechaVenta }}</td>
         <td>{{ ventas.precioFinal }}</td>
         <td>{{ ventas.observaciones }}</td>
-        <td><button class="eliminar"><i class="fa-solid fa-trash"></i></button></td>
+        <td><button class="eliminar" (click)="eliminarVenta(ventas.idVenta)"><i class="fa-solid fa-trash"></i></button></td>
       </tr>
 
     </table>

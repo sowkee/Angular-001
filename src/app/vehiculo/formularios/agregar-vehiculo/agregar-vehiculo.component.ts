@@ -39,7 +39,7 @@ export class AgregarVehiculoComponent {
       console.log(res);
       if (res.status === 'CREATED') {
         alert("Registro Exitoso");
-        
+        alert("Recargar la pagina.");
       }else {
         alert('Hubo un error');
       }

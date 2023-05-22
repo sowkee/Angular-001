@@ -12,6 +12,7 @@
     <table class="table">
 
       <tr>
+        <th><input type="checkbox"></th>
         <th> ID </th>
         <th> Nombre </th>
         <th> Correo </th>
@@ -22,13 +23,16 @@
       </tr>
   
       <tr *ngFor="let user of listUsers">
+        <td>
+          <input type="checkbox"  (change)="seleccionarFila($event, user)">
+        </td>
         <td>{{ user.idUsuario }}</td>
         <td>{{ user.nombre + " " + user.apellido}}</td>
         <td>{{ user.correo }}</td>
         <td>{{ user.identificacion }}</td>
         <td>{{ user.telefono }}</td>
         <td>{{ user.direccion }}</td>
-        <td><button class="eliminar"><i class="fa-solid fa-trash "></i></button></td>
+        <td><button class="eliminar" (click)="eliminarUsuario(user.idUsuario)"><i class="fa-solid fa-trash "></i></button></td>
       </tr>
   
     </table>
@@ -39,6 +43,7 @@
     <div *ngIf="show" class="registro-span">
       <span>No hay registros</span>
     </div>
+
   
   </div>
 

@@ -8,10 +8,13 @@ import { TablePeopleComponent } from './people/table-people/table-people.compone
 import { InicioComponent } from './templates/inicio/inicio.component';
 import { NosotrosComponent } from './templates/nosotros/nosotros.component';
 import { OopsComponent } from './templates/oops/oops.component';
+import { ActualizarComponent } from './people/formularios/actualizar/actualizar.component';
  
 
 const appRoutes: Routes = [
 
+
+  //Rutas header
   { path: '', redirectTo: '/inicio', pathMatch: 'full' },
   {path: "inicio", component: InicioComponent},
   {path: "nosotros", component: NosotrosComponent},
@@ -22,12 +25,16 @@ const appRoutes: Routes = [
     path: "dashboard",
     component: DashboardComponent,
     children: [
+      //Rutas hijas del dashboard
       { path: 'concesionarios', component: TableConcesionarioComponent },
       { path: 'usuarios', component: TablePeopleComponent },
       { path: 'vehiculos', component: TableVehiculoComponent },
       { path: 'ventas', component: TableVentaComponent },
+      
+      { path: 'actualizar', component: ActualizarComponent } //Actualiar usuario
     ]
   },
+
 
 
 ];

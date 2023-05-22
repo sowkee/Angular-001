@@ -19,7 +19,7 @@ import { VehiculoService } from './service/vehiculo.service';
 import { VentaService } from './service/venta.service';
 import { DashboardComponent } from './templates/dashboard/dashboard.component';
 import { MenuAccionesComponent } from './people/menu-acciones/menu-acciones.component';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule} from '@angular/material/dialog';
 import { AgregarComponent } from './people/formularios/agregar/agregar.component';
 import { ActualizarComponent } from './people/formularios/actualizar/actualizar.component';
 import { ActualizarConcesionarioComponent } from './concesionario/formularios/actualizar-concesionario/actualizar-concesionario.component';
@@ -80,14 +80,15 @@ import { OopsComponent } from './templates/oops/oops.component';
     ReactiveFormsModule,
     FormsModule,
     MatPaginatorModule,
-    MatTableModule
+    MatTableModule,
+    
   ],
   providers: [
     ServiceUserService,
     ConcesionarioService,
     VehiculoService,
     VentaService
-  ],
+  ], 
   bootstrap: [AppComponent]
 })
 export class AppModule { }

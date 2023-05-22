@@ -12,17 +12,7 @@ export class ActualizarVehiculoComponent implements OnInit{
 
   constructor(private fb: FormBuilder, private vehiculoServicio: VehiculoService) { }
 
-  ngOnInit(): void {
-    this.actualizarForm = this.fb.group({
-      idVehiculos: ['', Validators.required],
-      kilometraje: ['', Validators.required],
-      matricula: ['', Validators.required],
-      marca: ['', Validators.required],
-      modelo: ['', Validators.required],
-      color: ['', Validators.required],
-      precio: ['', Validators.required],
-    })
-  }
+  ngOnInit(): void {}
 
   actualizarVehiculo() {
     const data = this.actualizarForm.value;
@@ -30,6 +20,7 @@ export class ActualizarVehiculoComponent implements OnInit{
       if (res.status === 'CREATED') {
         console.log(res)
         alert("Actualizacion Exitosa");
+        alert("Recargar la pagina.");
       }else {
         alert('Hubo un error');
       }

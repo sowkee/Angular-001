@@ -11,6 +11,7 @@ export class TableVehiculoComponent implements OnInit {
 
   listVehiculos: VehiculosData[] = [];
   show:boolean = true;
+  idVehiculo: number = 0;
 
   constructor(private vehiculoService:VehiculoService) {}
 
@@ -26,6 +27,15 @@ export class TableVehiculoComponent implements OnInit {
       console.log(this.listVehiculos);
     }, (error) => {
       console.log(error)
+    });
+  }
+
+  eliminarVehiculo(idVehiculo:number) {
+    this.idVehiculo = idVehiculo;
+    this.vehiculoService.eliminarVehiculo(this.idVehiculo).subscribe(res => {
+      console.log("#####", res);
+      alert("Se eliminara la fila.");
+      alert("Recargar la pagina.");
     });
   }
 }

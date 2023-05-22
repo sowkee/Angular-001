@@ -27,6 +27,7 @@ export class ActualizarVentaComponent {
       if (res.status === 'CREATED') {
         console.log(res)
         alert("Actualizacion Exitosa");
+        alert("Recargar la pagina.");
       }else {
         alert('Hubo un error');
       }

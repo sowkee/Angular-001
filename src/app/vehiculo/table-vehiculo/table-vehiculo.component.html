@@ -29,7 +29,7 @@
         <td>{{ vehiculo.modelo }}</td>
         <td>{{ vehiculo.color }}</td>
         <td>{{ vehiculo.precio }}</td>
-        <td><button class="eliminar"><i class="fa-solid fa-trash"></i></button></td>
+        <td><button class="eliminar" (click)="eliminarVehiculo(vehiculo.idVehiculos)"><i class="fa-solid fa-trash"></i></button></td>
 
       </tr>
 

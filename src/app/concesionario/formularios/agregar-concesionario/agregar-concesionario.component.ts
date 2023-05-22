@@ -35,7 +35,7 @@ export class AgregarConcesionarioComponent {
       console.log(res.data);
       if (res.status === 'ACCEPTED') {
         alert("Registro Exitoso");
-
+        alert("Recargar la pagina.");
       } else {
         alert('Hubo un error');
       }

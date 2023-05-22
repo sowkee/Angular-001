@@ -14,11 +14,9 @@ import { MatPaginator } from '@angular/material/paginator';
 })
 export class TableConcesionarioComponent implements OnInit {
 
-  
-
-
   listConcesionarios: ConcesionarioData[] = [];
   show: boolean = true
+  idConcesionario: number = 0;
 
   constructor(private concesionarioService: ConcesionarioService) { }
 
@@ -32,14 +30,18 @@ export class TableConcesionarioComponent implements OnInit {
       this.listConcesionarios = res.data;
       (this.listConcesionarios.length > 0) ? this.show = false : this.show = true
       console.log(this.listConcesionarios);
-      
-      
     }, (error) => {
       console.log(error)
     });
-    
+  }
 
-    
+  eliminarConcesionario(idConcesionario: number) {
+    this.idConcesionario = idConcesionario;
+    this.concesionarioService.eliminarConcesionario(this.idConcesionario).subscribe(res => {
+      console.log("#####", res);
+      alert("Se eliminara la fila.");
+      alert("Recargar la pagina.");
+    });
   }
 
 }

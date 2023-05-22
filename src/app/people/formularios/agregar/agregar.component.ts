@@ -39,10 +39,7 @@ export class AgregarComponent {
       console.log(res.data);
       if (res.status === 'CREATED') {
         alert("Registro Exitoso");
-        this.router.navigateByUrl('dashboard/usuarios', { skipLocationChange: true }).then(() => {
-          this.router.navigate(['dashboard/usuarios']);
-        });
-        
+        alert("Recargar la pagina.");        
       } else {
         alert('Hubo un error');
       }

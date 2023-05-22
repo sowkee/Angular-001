@@ -28,7 +28,7 @@ export class ServiceUserService {
   }
 
   eliminarUsuario(data:number): Observable<ResponseI> {
-    return this.http.delete<ResponseI>(urlBase + "/delete/" + data);
+    return this.http.get<ResponseI>(urlBase + "/delete/" + data);
   }
-  
+
 }

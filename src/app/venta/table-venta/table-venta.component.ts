@@ -10,6 +10,7 @@ export class TableVentaComponent implements OnInit {
 
   listVentas: any[] = [];
   show: boolean = true;
+  idVenta: number = 0;
 
   constructor(private ventasService: VentaService) { }
 
@@ -25,6 +26,15 @@ export class TableVentaComponent implements OnInit {
       console.log(this.listVentas);
     }, (error) => {
       console.log(error);
+    });
+  }
+
+  eliminarVenta(idVenta: number) {
+    this.idVenta = idVenta;
+    this.ventasService.eliminarVenta(this.idVenta).subscribe(res => {
+      console.log("#####", res);
+      alert("Se eliminara la fila.");
+      alert("Recargar la pagina.");
     });
   }
 
